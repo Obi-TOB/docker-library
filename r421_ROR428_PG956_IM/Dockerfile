@@ -139,6 +139,6 @@
     RUN cd /projects \
         && sudo git clone https://github.com/refinery/refinerycms.git \ 
         && sudo git clone https://github.com/spree/spree.git \ 
-        && sudo git clone https://github.com/spree-contrib/spree_drop_ship.git \ 
+        && sudo git clone https://github.com/spree-contrib/spree_drop_ship.git
 
     EXPOSE 3000
