@@ -134,4 +134,9 @@ RUN sudo apt-get update && sudo apt-get install -y mysql-client postgresql-clien
 
 RUN sudo gem install rails --version "$RAILS_VERSION"
 
+ENV PROJECTS_REPO https://ansromanov@bitbucket.org/tobkircher/gasido_v0.git
+
+RUN cd /projects \
+    && git clone "$PROJECTS_REPO"
+
 EXPOSE 3000
