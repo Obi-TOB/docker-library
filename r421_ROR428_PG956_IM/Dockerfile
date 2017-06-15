@@ -11,7 +11,7 @@ USER root
 RUN apt-get update && apt-get -y install postgresql postgresql-contrib libpq-dev build-essential libreadline-dev
 
 # install some softwar
-RUN apt-get update && apt-get -y install mc vim
+# RUN apt-get update && apt-get -y install mc vim
 
 USER postgres
 
