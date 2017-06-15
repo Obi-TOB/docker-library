@@ -134,9 +134,11 @@
 
     RUN sudo gem install rails --version "$RAILS_VERSION"
 
-    ENV PROJECTS_REPO https://ansromanov@bitbucket.org/tobkircher/gasido_v0.git
 
+    # Install dependencies from github
     RUN cd /projects \
-        && sudo git clone "$PROJECTS_REPO"
+        && sudo git clone https://github.com/refinery/refinerycms.git \ 
+        && sudo git clone https://github.com/spree/spree.git \ 
+        && sudo git clone https://github.com/spree-contrib/spree_drop_ship.git \ 
 
     EXPOSE 3000
