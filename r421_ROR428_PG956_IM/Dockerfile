@@ -8,7 +8,10 @@ USER root
 # && apt-get -y -q install python-software-properties software-properties-common \
 # && apt-get -y -q install  postgresql-9.5 postgresql-client-9.3 postgresql-contrib-9.3
 # Install postgres and related pg gem requirements
-RUN apt-get update && apt-get -y install postgresql postgresql-contrib libpq-dev build-essential
+RUN apt-get update && apt-get -y install postgresql postgresql-contrib libpq-dev build-essential libreadline-dev
+
+# install some softwar
+RUN apt-get update && apt-get -y install mc vim
 
 USER postgres
 
