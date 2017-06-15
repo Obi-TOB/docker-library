@@ -136,9 +136,8 @@
 
 
     # Install dependencies from github
-    RUN cd /projects \
-        && sudo git clone https://github.com/refinery/refinerycms.git \ 
-        && sudo git clone https://github.com/spree/spree.git \ 
-        && sudo git clone https://github.com/spree-contrib/spree_drop_ship.git
+    RUN sudo git clone https://github.com/refinery/refinerycms.git  /projects/refinery
+    RUN sudo git clone https://github.com/spree/spree.git /projects/spree
+    RUN sudo git clone https://github.com/spree-contrib/spree_drop_ship.git /projects/spree_drop_ship
 
     EXPOSE 3000
