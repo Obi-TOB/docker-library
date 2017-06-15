@@ -112,9 +112,9 @@ ENV BUNDLER_VERSION 1.14.6
 
 RUN sudo gem install bundler --version "$BUNDLER_VERSION"
 
-ENV RAKE_VERSION 12.0.0
+# ENV RAKE_VERSION 12.0.0
 
-RUN sudo gem install rake --version "$RAKE_VERSION"
+# RUN sudo gem install rake --version "$RAKE_VERSION"
 
 # install things globally, for great justice
 # and don't create ".bundle" in all our apps
