@@ -112,10 +112,6 @@
 
     RUN sudo gem install bundler --version "$BUNDLER_VERSION"
 
-     ENV RAKE_VERSION 12.0.0
-
-     RUN sudo gem install rake --version "$RAKE_VERSION"
-
     # install things globally, for great justice
     # and don't create ".bundle" in all our apps
     ENV GEM_HOME /usr/local/bundle
@@ -133,11 +129,5 @@
     RUN sudo apt-get update && sudo apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends && sudo rm -rf /var/lib/apt/lists/*
 
     RUN sudo gem install rails --version "$RAILS_VERSION"
-
-
-    # Install dependencies from github
-    #RUN sudo git clone https://github.com/refinery/refinerycms.git  /projects/refinery
-    #RUN sudo git clone https://github.com/spree/spree.git /projects/spree
-    #RUN sudo git clone https://github.com/spree-contrib/spree_drop_ship.git /projects/spree_drop_ship
 
     EXPOSE 3000
